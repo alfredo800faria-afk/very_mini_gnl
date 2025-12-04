@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_netx_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srussso <srusso-b@student.42lisboa.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 17:44:15 by srussso           #+#    #+#             */
-/*   Updated: 2025/12/04 18:22:34 by srussso          ###   ########.fr       */
+/*   Created: 2025/12/04 18:18:44 by srussso           #+#    #+#             */
+/*   Updated: 2025/12/04 18:24:51 by srussso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <stdio.h>
+#include "get_next_line.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10000000
-# endif
-
-char	*gnl(int fd);
-char	*clear(int i, int byte, char *str_buffer);
-
-#endif
+char	*clear(int i, int byte, char *str_buffer)
+{
+	if (i == 0 || byte < 0)
+	{
+		free(str_buffer);
+		return (NULL);
+	}
+}

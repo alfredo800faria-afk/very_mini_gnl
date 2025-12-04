@@ -6,7 +6,7 @@
 /*   By: srussso <srusso-b@student.42lisboa.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 17:43:12 by srussso           #+#    #+#             */
-/*   Updated: 2025/12/04 18:04:26 by srusso-b         ###   ########.fr       */
+/*   Updated: 2025/12/04 18:26:53 by srussso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,11 @@ char	*gnl(int fd)
 			break ;
 		byte = read(fd, &c, 1);
 	}
-	if (i == 0 || byte < 0)
-	{
-		free(str_buffer);
-		return (NULL);
-	}
+	clear(i, byte, str_buffer);
 	str_buffer[i] = '\0';
 	return (str_buffer);
 }
-/*
+
 int	main(void)
 {
 	int		fd;
@@ -64,4 +60,3 @@ int	main(void)
 
 	return (0);
 }
-*/
