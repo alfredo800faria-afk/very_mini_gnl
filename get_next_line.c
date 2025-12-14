@@ -60,7 +60,7 @@ int	main(void)
 		printf("fd: %i, %s\n", fd, str);
 		i++;
 	}
-
+	free(str);
 	close(fd);
 
 	return (0);
