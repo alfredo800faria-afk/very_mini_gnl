@@ -22,6 +22,6 @@
 # endif
 
 char	*gnl(int fd);
-char	*clear(int i, int byte, char *str_buffer);
+void	clear(char **str_buffer);
 
 #endif

@@ -12,11 +12,11 @@
 
 #include "get_next_line.h"
 
-char	*clear(int i, int byte, char *str_buffer)
+void	clear(char **buffer)
 {
-	if (i == 0 || byte < 0)
+	if (buffer && *buffer)
 	{
-		free(str_buffer);
-		return (NULL);
+		free(*buffer);
+		*buffer = NULL;
 	}
 }

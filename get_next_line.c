@@ -34,7 +34,11 @@ char	*gnl(int fd)
 			break ;
 		byte = read(fd, &c, 1);
 	}
-	clear(i, byte, str_buffer);
+	if (i == 0 || byte < 0)
+	{
+		clear(&str_buffer);
+		return (NULL);
+	}
 	str_buffer[i] = '\0';
 	return (str_buffer);
 }
@@ -56,7 +60,8 @@ int	main(void)
 		printf("fd: %i, %s\n", fd, str);
 		i++;
 	}
-	//close(fd);
+
+	close(fd);
 
 	return (0);
 }
