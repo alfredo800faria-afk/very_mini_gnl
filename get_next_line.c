@@ -42,7 +42,7 @@ char	*gnl(int fd)
 	str_buffer[i] = '\0';
 	return (str_buffer);
 }
-
+/*
 int	main(void)
 {
 	int		fd;
@@ -65,3 +65,4 @@ int	main(void)
 
 	return (0);
 }
+*/
